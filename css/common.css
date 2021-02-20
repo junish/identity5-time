@@ -141,13 +141,19 @@ display:inline-block;
         max-width: 110px;
         height: auto;
     }
+    .soon {
+        border:5px solid #e22e5e;
+        color: #e22e5e;
+    }
+    .soon .skillicon{
+        fill:  #e22e5e;
+    }
     .active{
         border:5px solid #FBBF24;
         color:  #FBBF24;
     }
-    .soon {
-        border:5px solid #e22e5e;
-        color: #e22e5e;
+    .active .skillicon{
+        fill: #FBBF24;
     }
     .countdownArea{
         font-size:12vh;
