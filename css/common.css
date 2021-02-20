@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+body {
+	font-size: 16px;
+	line-height: 140%;
+    font-family: '游ゴシック体', 'Yu Gothic', YuGothic,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+	color: #028ebd;
+	text-align: center;
+    
+}
+
+a:link { text-decoration:none; color: #000;}
+a:visited { text-decoration:none; color: #000;}
+a:active { text-decoration:none; color: #000;}
+a:hover { text-decoration:none; color: #000;}
+
+#container {
+	margin: 0 auto;
+	padding: 100px 0;
+	width: 100%;
+	text-align: center;
+}
+
+div {
+	font-weight: bold;
+	line-height: 1.2em;
+}
+header{
+    width:100%;
+    background:#1a333c;
+    color:#fff;
+    padding: 1rem;
+    margin:0 0 2vh;
+    box-sizing: border-box;
+}
+header h1{
+display:inline-block;
+}
+.twitter{
+    width: 2rem;
+    height: auto;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+}
+.skillarea{
+    font-size:1.5em;
+    margin: 0 0 20px;
+    border: 5px solid #028ebd;
+    width: 25%;
+    min-width: 200px;
+    display: inline-block;
+    margin: 0 1% 20px;
+    padding: 2%;
+    box-sizing: border-box;
+    position:relative;
+}
+.skillicon{
+    fill: #e6e6e6;
+    position:absolute;
+    bottom:15px;
+    right: 15px;
+    width:34%;
+    max-width:90px;
+    height: auto;
+}
+.active{
+    border:5px solid #e22e5e;
+    color: #e22e5e;
+}
+.active .skillicon{
+    fill: #e22e5e;
+}
+.countdownArea{
+    font-size:3.6em;
+    height:200px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+@media screen and (max-width: 480px){
+    header{
+        width: 100%;
+        background: #1a333c;
+        color: #fff;
+        padding: 0.5rem;
+        margin: 0 0 2vh;
+        box-sizing: border-box;
+    }
+    header h1{
+        display:inline-block;
+    }
+    .twitter{
+        width: 1.7rem;
+        height: auto;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.7rem;
+    }
+    #container{
+        padding:0 !important;
+    }
+    .skillarea{
+        font-size: 1.5em;
+        border: 5px solid #028ebd;
+        width: -webkit-calc(100% - 4rem);
+        margin: 1.5vh auto;
+        display: block;
+        max-width: 100%;
+        padding: 2%;
+        box-sizing: border-box;
+        height: 29vh;
+    }
+    .skillicon{
+        fill: #e6e6e6;
+        position:absolute;
+        bottom:15px;
+        right: 15px;
+        width:20%;
+        max-width: 110px;
+        height: auto;
+    }
+    .active{
+        border:5px solid #e22e5e;
+        color: #e22e5e;
+    }
+    .countdownArea{
+        font-size:12vh;
+        height:20vh
+    }
+
+}
