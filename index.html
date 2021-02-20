@@ -63,8 +63,13 @@ function skilltimer(i){
   countTimer[i] = setInterval(function(){
     var next = _self.text() - 1;
     _self.text(next);
+
+    if(next <= 10) {
+      $(".skillarea").eq(i).addClass("soon");
+    }
+
     if(next <= 0) {
-        counterClear(i);
+      counterClear(i);
     }
   }, 1000);
 
