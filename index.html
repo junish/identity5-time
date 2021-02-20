@@ -24,6 +24,7 @@ $(".skillarea").click(function(){
 $(".start-button").click(function(){
   $(".skillarea.start-skill").each(function(i, value){
     const index = $(value).data("index"); 
+    counterClear(index);
     skilltimer(index);
   });
 });
