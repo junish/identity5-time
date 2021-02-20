@@ -16,16 +16,16 @@ countTimer = [],
 activeCounter = [];
 
 $(".skillarea").each(function(i){
-	init[i] = $(".countdownArea",this).data("num");
+  init[i] = $(".countdownArea",this).data("num");
 });
 $(".skillarea").click(function(){
-    skilltimer($(".skillarea").index($(this)));
+  skilltimer($(".skillarea").index($(this)));
 });
 $(".start-button").click(function(){
-    $(".skillarea.start-skill").each(function(i, value){
-        const index = $(value).data("index"); 
-        skilltimer(index);
-    });
+  $(".skillarea.start-skill").each(function(i, value){
+    const index = $(value).data("index"); 
+    skilltimer(index);
+  });
 });
 
 
@@ -49,32 +49,33 @@ $(window).keydown(function(e){
       default:
      i=100;
   }
-    skilltimer(i);
+
+  skilltimer(i);
 });
 
 function skilltimer(i){
   var _self = $(".countdownArea").eq(i);
-  	if($(".skillarea").eq(i).hasClass("active")){
-  		counterClear(i);
-  	}else{
-  		countTimer[i] = setInterval(function(){
+  if($(".skillarea").eq(i).hasClass("active")){
+    counterClear(i);
+    return;
+  }
 
-              var next = _self.text() - 1;
-  			_self.text(next);
-              if(next <= 0) counterClear(i);
+  countTimer[i] = setInterval(function(){
+    var next = _self.text() - 1;
+    _self.text(next);
+    if(next <= 0) {
+        counterClear(i);
+    }
+  }, 1000);
 
-  		},1000);
-      $(".skillarea").eq(i).addClass("active");
-  	}
+   $(".skillarea").eq(i).addClass("active");
 }
 
-
-
-
 function counterClear(i){
-	clearInterval(countTimer[i]);
-	$(".countdownArea").eq(i).text(init[i]);
-    $(".skillarea").eq(i).removeClass('active');
+  clearInterval(countTimer[i]);
+  $(".countdownArea").eq(i).text(init[i]);
+  $(".skillarea").eq(i).removeClass('active');
+  $(".skillarea").eq(i).removeClass('soon');
 }
 
 
